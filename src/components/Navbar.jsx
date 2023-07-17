@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../public/img/edspertId.png";
 
 const Navbar = () => {
     const [navbarActive, setNavbarActive] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
         <div className="z-20 flex w-full h-full cursor-pointer">
             <div className="fixed flex items-center justify-between w-full top-5 md:px-16 md:bg-cyan-950 md:top-0 md:py-3">
                 <div className="flex items-center">
-                    <img src="/public/img/edspertId.png" alt="Logo" className="w-8"/>
+                    <img src={Logo} alt="Logo" className="w-8"/>
                     <h1 className="ml-2">Edspert.Id</h1>
                 </div>
                 <img src="/public/img/menu.svg" alt="menu" className="p-1 mr-3 bg-white rounded-sm md:hidden hover:bg-gray-400 w-7" onClick={buttonNavbarActive}/>
