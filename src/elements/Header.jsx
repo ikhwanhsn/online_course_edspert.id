@@ -1,4 +1,7 @@
 import Navbar from "../components/Navbar";
+import Icon from "../../public/img/headerImage.png";
+import Icon1 from "../../public/img/iconHeader1.png";
+import Icon2 from "../../public/img/iconHeader2.png";
 
 const Header = () => {
     return ( 
@@ -15,9 +18,9 @@ const Header = () => {
                     <p className="px-5 mt-12 md:w-3/4 md:mx-auto md:px-0">Tingkatkan skill dan pengetahuan bersama para mentor terbaik di bidangnya, untuk siapkan karir impian anda.</p>
                 </div>
                 <div className="relative w-full mt-8 md:right-0 md:top-44 md:absolute">
-                    <img src="/public/img/headerImage.png" alt="header image" className="absolute z-20 mt-2 md:-top-64 md:right-0"/>
-                    <img src="/public/img/iconHeader1.png" alt="icon" className="absolute z-10 w-28 top-44 left-16 md:scale-y-150 md:left-2/4 md:ml-16 md:mt-1 md:top-40"/>
-                    <img src="/public/img/iconHeader2.png" alt="icon" className="absolute z-10 w-28 top-12 md:-top-12 right-16 md:scale-150 md:right-52"/>
+                    <img src={Icon} alt="header image" className="absolute z-20 mt-2 md:-top-64 md:right-0"/>
+                    <img src={Icon1} alt="icon" className="absolute z-10 w-28 top-44 left-16 md:scale-y-150 md:left-2/4 md:ml-16 md:mt-1 md:top-40"/>
+                    <img src={Icon2} alt="icon" className="absolute z-10 w-28 top-12 md:-top-12 right-16 md:scale-150 md:right-52"/>
                 </div>
             </div>
         </div>

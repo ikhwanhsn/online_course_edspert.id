@@ -1,4 +1,5 @@
 import { json, useNavigate } from "react-router-dom";
+import CourseImg from "../../public/img/course.png";
 
 const CourseCard = ({title, desc, batch, mentor}) => {
     const clickCourse = () => {
@@ -14,7 +15,7 @@ const CourseCard = ({title, desc, batch, mentor}) => {
 
     return ( 
         <div className="flex flex-col w-full h-full transition-all bg-white rounded-lg shadow-lg cursor-pointer hover:scale-105 hover:shadow-xl" onClick={() => clickCourse()}>
-            <img src="/public/img/course.png" alt="course" className="rounded-t-lg bg-cyan-950"/>
+            <img src={CourseImg} alt="course" className="rounded-t-lg bg-cyan-950"/>
             <div className="m-3 text-left">
                 <h2 className="text-lg font-bold">{title}</h2>
                 <h3 className="mt-1 font-bold text-md">{desc}</h3>
