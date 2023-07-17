@@ -2,6 +2,10 @@ import { useNavigate } from "react-router-dom";
 import CourseEdu from "../components/CourseEdu";
 import Navbar from "../components/Navbar";
 import Footer from "../elements/Footer";
+import Icon from "../../public/img/headerImage.png";
+import Icon1 from "../../public/img/iconHeader1.png";
+import Icon2 from "../../public/img/iconHeader2.png";
+import Checklist from "../../public/img/checklistCourse.png";
 
 const ProductDetails = () => {
     const navigate = useNavigate();
@@ -31,9 +35,9 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <div className="relative w-full mt-5 md:right-0 md:top-44 md:absolute">
-                    <img src="/public/img/headerImage.png" alt="header image" className="absolute z-20 mt-2 md:-top-64 md:right-0"/>
-                    <img src="/public/img/iconHeader1.png" alt="icon" className="absolute z-10 w-28 top-44 left-16 md:scale-y-150 md:left-2/4 md:ml-16 md:mt-1 md:top-40"/>
-                    <img src="/public/img/iconHeader2.png" alt="icon" className="absolute z-10 w-28 top-12 md:-top-12 right-16 md:scale-150 md:right-52"/>
+                    <img src={Icon} alt="header image" className="absolute z-20 mt-2 md:-top-64 md:right-0"/>
+                    <img src={Icon1} alt="icon" className="absolute z-10 w-28 top-44 left-16 md:scale-y-150 md:left-2/4 md:ml-16 md:mt-1 md:top-40"/>
+                    <img src={Icon2} alt="icon" className="absolute z-10 w-28 top-12 md:-top-12 right-16 md:scale-150 md:right-52"/>
                 </div>
                 </div>
             </div>
@@ -78,19 +82,19 @@ const ProductDetails = () => {
                         <h2 className="text-xl font-bold md:text-2xl">Materi</h2>
                         <div className="flex flex-col gap-2 mt-3 md:mt-4">
                             <div className="flex items-center gap-2">
-                                <img src="/public/img/checklistCourse.png" alt="Course" className="w-4 h-4"/>
+                                <img src={Checklist} alt="Course" className="w-4 h-4"/>
                                 <h1 className="text-lg font-bold">E-Sertifikat</h1>
                             </div>
                             <div className="flex items-center gap-2 ">
-                                <img src="/public/img/checklistCourse.png" alt="Course" className="w-4 h-4"/>
+                                <img src={Checklist} alt="Course" className="w-4 h-4"/>
                                 <h1 className="text-lg font-bold">Portfolio</h1>
                             </div>
                             <div className="flex items-center gap-2 ">
-                                <img src="/public/img/checklistCourse.png" alt="Course" className="w-4 h-4"/>
+                                <img src={Checklist} alt="Course" className="w-4 h-4"/>
                                 <h1 className="text-lg font-bold">Job Connector</h1>
                             </div>
                             <div className="flex items-center gap-2 ">
-                                <img src="/public/img/checklistCourse.png" alt="Course" className="w-4 h-4"/>
+                                <img src={Checklist} alt="Course" className="w-4 h-4"/>
                                 <h1 className="text-lg font-bold">Career Development</h1>
                             </div>
                         </div>
