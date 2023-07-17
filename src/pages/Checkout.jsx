@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../elements/Footer";
 import Mandiri from "../../public/img/mandiri.png";
-import Bca from "../../public/img/Bca.png";
+import Bca from "../../public/img/bca.png";
 import ProfilPesanan from "../../public/img/profilRingkasanPesanan.png";
 
 const Checkout = () => {
