@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../elements/Footer";
+import Mandiri from "../../public/img/mandiri.png";
+import Bca from "../../public/img/Bca.png";
+import ProfilPesanan from "../../public/img/profilRingkasanPesanan.png";
 
 const Checkout = () => {
     const navigate = useNavigate();
@@ -31,11 +34,11 @@ const Checkout = () => {
                     <hr />
                     <div className="mt-3">
                         <div className="flex gap-3 p-3 mb-2 text-sm border shadow-sm">
-                            <img src="/public/img/mandiri.png" alt="mandiri" />
+                            <img src={Mandiri} alt="mandiri" />
                             <p>Bank Transfer ke Rek Bank Mandiri</p>
                         </div>
                         <div className="flex gap-3 p-3 text-sm border shadow-sm">
-                            <img src="/public/img/bca.png" alt="mandiri" />
+                            <img src={Bca} alt="BCA" />
                             <p>Bank Transfer ke Rek Bank BCA</p>
                         </div>
                     </div>
@@ -44,11 +47,11 @@ const Checkout = () => {
                     <hr />
                     <div className="mt-3">
                         <div className="flex gap-3 p-3 mb-2 text-sm border shadow-sm">
-                            <img src="/public/img/mandiri.png" alt="mandiri" />
+                            <img src={Mandiri} alt="mandiri" />
                             <p>Bank Transfer ke Rek Bank Mandiri</p>
                         </div>
                         <div className="flex gap-3 p-3 text-sm border shadow-sm">
-                            <img src="/public/img/bca.png" alt="mandiri" />
+                            <img src={Bca} alt="BCA" />
                             <p>Bank Transfer ke Rek Bank BCA</p>
                         </div>
                     </div>
@@ -57,7 +60,7 @@ const Checkout = () => {
                     <h2 className="text-lg font-bold">Ringkasan Pesanan</h2>
                     <div className="flex gap-3 mt-3">
                         <div className="w-24 h-24 p-3 rounded-lg bg-cyan-950">
-                            <img src="/public/img/profilRingkasanPesanan.png" alt="Profil" className="w-12 mx-auto"/>
+                            <img src={ProfilPesanan} alt="Profil" className="w-12 mx-auto"/>
                         </div>
                         <div className="text-left ">
                             <h2 className="text-lg font-bold">{data.title}</h2>
