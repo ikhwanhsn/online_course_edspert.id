@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../elements/Footer";
+import ProfilPesanan from "../../public/img/profilRingkasanPesanan.png";
+import Mandiri from "../../public/img/mandiri.png";
 
 const Bayar = () => {
     const navigate = useNavigate();
@@ -14,11 +16,11 @@ const Bayar = () => {
                 <Navbar/>
             </div>
             <div className="flex items-center pt-16 mx-3 text-xs">
-                <span class="material-symbols-outlined mr-1 scale-75">keyboard_backspace</span>
+                <span className="mr-1 scale-75 material-symbols-outlined">keyboard_backspace</span>
                 <p onClick={() => navigate('/checkout')} className="cursor-pointer hover:text-blue-500">Checkout</p>
                 <div className="mt-1">
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-                    <span class="material-symbols-outlined scale-75">chevron_right</span>
+                    <span className="scale-75 material-symbols-outlined">chevron_right</span>
                 </div>
                 <p className="font-bold text-blue-500">Instruksi Bayar</p>
             </div>
@@ -29,7 +31,7 @@ const Bayar = () => {
                         <div className="">
                             <div className="flex gap-4 mt-3">
                                 <div className="w-24 h-24 p-3 rounded-lg bg-cyan-950">
-                                    <img src="/public/img/profilRingkasanPesanan.png" alt="Profil" className="w-12 mx-auto"/>
+                                    <img src={ProfilPesanan} alt="Profil" className="w-12 mx-auto"/>
                                 </div>
                                 <div className="text-left ">
                                     <h2 className="text-lg font-bold">{data.title}</h2>
@@ -47,7 +49,7 @@ const Bayar = () => {
                             <h3 className="font-bold">Metode Pembayaran</h3>
                             <p className="mt-2 text-sm text-gray-700">Bank Transfer (verifikasi manual)-Mandiri</p>
                             <div className="flex justify-between mt-3">
-                                <img src="/public/img/mandiri.png" alt="mandiri" className="w-auto"/>
+                                <img src={Mandiri} alt="mandiri" className="w-auto"/>
                                 <div className="">
                                     <div className="flex gap-2">
                                         <h4 className="font-bold">No Rek. 137000299089</h4>
