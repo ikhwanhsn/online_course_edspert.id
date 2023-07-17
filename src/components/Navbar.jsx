@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../public/img/edspertId.png";
+import Menu from "../../public/img/menu.svg";
 
 const Navbar = () => {
     const [navbarActive, setNavbarActive] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
                     <img src={Logo} alt="Logo" className="w-8"/>
                     <h1 className="ml-2">Edspert.Id</h1>
                 </div>
-                <img src="/public/img/menu.svg" alt="menu" className="p-1 mr-3 bg-white rounded-sm md:hidden hover:bg-gray-400 w-7" onClick={buttonNavbarActive}/>
+                <img src={Menu} alt="menu" className="p-1 mr-3 bg-white rounded-sm md:hidden hover:bg-gray-400 w-7" onClick={buttonNavbarActive}/>
                 <div className="items-center hidden gap-16 md:flex">
                     <ul className="flex w-full gap-12">
                         <li className="transition-all hover:text-gray-300" onClick={() => navigate('/')}>Program</li>
