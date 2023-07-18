@@ -1,7 +1,11 @@
 import { json, useNavigate } from "react-router-dom";
 import CourseImg from "../../public/img/course.png";
+import { useEffect, useState } from "react";
+import { data } from "autoprefixer";
 
 const CourseCard = ({title, desc, batch, mentor1, mentor2, profesi1, profesi2, price}) => {
+    const navigate = useNavigate();
+
     const clickCourse = () => {
         const dataCourse = {
             title,
@@ -14,7 +18,7 @@ const CourseCard = ({title, desc, batch, mentor1, mentor2, profesi1, profesi2, p
             price
         }
         const data = localStorage.setItem("data course", JSON.stringify(dataCourse));
-        window.location.href = "/detail";
+        navigate('/detail');
     }
 
     return ( 
