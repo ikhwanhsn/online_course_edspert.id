@@ -54,7 +54,7 @@ const CourseContent = () => {
         },
         {
             title: 'Cybersecurity and Hacking',
-            desc: 'Learn about computer security and hacking',
+            desc: 'Learn about computer security',
             batch: 'October 2023',
             mentor1: 'Dr. Michael Roberts',
             mentor2: 'Nathan Sullivan',
@@ -64,7 +64,7 @@ const CourseContent = () => {
         },
         {
             title: 'Data Visualization',
-            desc: ' Transform data into interactive visualizations',
+            desc: ' Transform data into interactive',
             batch: 'October 2023',
             mentor1: 'Prof. Laura Hernandez',
             mentor2: 'Dr. Victoria Harrison',
