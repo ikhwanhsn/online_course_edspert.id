@@ -15,7 +15,7 @@ const Bayar = () => {
 
     return ( 
         <div className="bg-slate-200">
-            <div className="fixed top-0 w-full h-16 text-white bg-cyan-950">
+            <div className="fixed top-0 z-20 w-full h-16 text-white bg-cyan-950">
                 <Navbar/>
             </div>
             <div className="flex items-center pt-16 mx-3 text-xs">
@@ -56,7 +56,7 @@ const Bayar = () => {
                                 <div className="">
                                     <div className="flex gap-2">
                                         <h4 className="font-bold">No Rek. 137000299089</h4>
-                                        <div className="flex text-blue-500">
+                                        <div className="z-10 flex text-blue-500 ">
                                             <span className="scale-75 material-symbols-outlined">content_copy</span>
                                             <p>Salin</p>
                                         </div>
@@ -69,8 +69,8 @@ const Bayar = () => {
                         </div>
                         <div className="">
                             <h2 className="mt-3 font-bold ">Instruksi Pembayaran</h2>
-                            <div className="mt-3">
-                                <ul className="flex justify-between gap-0 font-bold text-gray-700 border-b-2 md:gap-36">
+                            <div className="mt-3 md:w-[31rem]">
+                                <ul className="flex justify-between gap-0 font-bold text-gray-700 border-b-2 md:mr-5">
                                     <li onClick={() => setInstructionTabActive({atm: true, iBanking: false, mBanking:false})} className={`pb-1 transition-all cursor-pointer ${instructionTabActive.atm && 'border-b-2'} border-gray-400 hover:border-b-2`}>ATM</li>
                                     <li onClick={() => setInstructionTabActive({atm: false, iBanking: true, mBanking:false})} className={`pb-1 cursor-pointer transition-all ${instructionTabActive.iBanking && 'border-b-2'} border-gray-400 hover:border-b-2`}>Internet Banking</li>
                                     <li onClick={() => setInstructionTabActive({atm: false, iBanking: false, mBanking:true})} className={`pb-1 cursor-pointer transition-all ${instructionTabActive.mBanking && 'border-b-2'} border-gray-400 hover:border-b-2`}>M-Banking</li>
