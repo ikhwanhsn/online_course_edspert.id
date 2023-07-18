@@ -71,7 +71,7 @@ const Checkout = () => {
                             </div>
                             <div className="flex gap-3 mb-5 text-sm">
                                 <p>Mentor</p>
-                                <p>{data.mentor}</p>
+                                <p>{data.mentor1}</p>
                             </div>
                         </div>
                     </div>
@@ -91,8 +91,8 @@ const Checkout = () => {
                             <li>Kode Unik</li>
                         </ul>
                         <ul className="text-center">
-                            <li>Rp. 99.000</li>
-                            <li>-</li>
+                            <li>{(parseInt(data.price)+200000).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</li>
+                            <li>{(parseInt(data.price)+200000-data.price).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</li>
                             <li>-</li>
                             <li>-</li>
                         </ul>
@@ -100,7 +100,7 @@ const Checkout = () => {
                     <hr />
                     <div className="flex justify-between mt-3">
                         <h3 className="mb-2 font-bold ">Total Pembayaran</h3>
-                        <p className="font-bold">Rp. 99.000</p>
+                        <p className="font-bold">{(parseInt(data.price)).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</p>
                     </div>
                     <p className="mt-5 text-sm">Dengan menekan tombol Bayar kamu telah menyetujui syarat dan ketentuan yang berlaku, silahkan baca kembali <a href="" className="text-blue-500">Syarat & ketentuan</a> yang berlaku.</p>
                     <div className="flex items-center justify-between mt-3">

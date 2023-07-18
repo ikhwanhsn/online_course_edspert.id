@@ -1,13 +1,17 @@
 import { json, useNavigate } from "react-router-dom";
 import CourseImg from "../../public/img/course.png";
 
-const CourseCard = ({title, desc, batch, mentor}) => {
+const CourseCard = ({title, desc, batch, mentor1, mentor2, profesi1, profesi2, price}) => {
     const clickCourse = () => {
         const dataCourse = {
             title,
             desc,
             batch,
-            mentor
+            mentor1,
+            mentor2,
+            profesi1,
+            profesi2,
+            price
         }
         const data = localStorage.setItem("data course", JSON.stringify(dataCourse));
         window.location.href = "/detail";
@@ -25,7 +29,7 @@ const CourseCard = ({title, desc, batch, mentor}) => {
                 </div>
                 <div className="flex gap-3 mt-1 mb-5 text-sm">
                     <p>Mentor</p>
-                    <p>{mentor}</p>
+                    <p>{mentor1}</p>
                 </div>
             </div>
         </div>

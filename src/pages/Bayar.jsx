@@ -3,8 +3,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../elements/Footer";
 import ProfilPesanan from "../../public/img/profilRingkasanPesanan.png";
 import Mandiri from "../../public/img/mandiri.png";
+import { useState } from "react";
 
 const Bayar = () => {
+    const [instructionTabActive, setInstructionTabActive] = useState({atm: true, iBanking: false, mBanking:false});
+
     const navigate = useNavigate();
 
     const detailCourse = localStorage.getItem("data course");
@@ -42,19 +45,19 @@ const Bayar = () => {
                                     </div>
                                     <div className="flex gap-3 mb-5 text-sm">
                                         <p>Mentor</p>
-                                        <p>{data.mentor}</p>
+                                        <p>{data.mentor1}</p>
                                     </div>
                                 </div>
                             </div>
                             <h3 className="font-bold">Metode Pembayaran</h3>
                             <p className="mt-2 text-sm text-gray-700">Bank Transfer (verifikasi manual)-Mandiri</p>
-                            <div className="flex justify-between mt-3">
-                                <img src={Mandiri} alt="mandiri" className="w-auto"/>
+                            <div className="flex justify-between gap-2 mt-3">
+                                <img src={Mandiri} alt="mandiri" className="w-24 px-3 py-4"/>
                                 <div className="">
                                     <div className="flex gap-2">
                                         <h4 className="font-bold">No Rek. 137000299089</h4>
                                         <div className="flex text-blue-500">
-                                            <span class="material-symbols-outlined scale-75">content_copy</span>
+                                            <span className="scale-75 material-symbols-outlined">content_copy</span>
                                             <p>Salin</p>
                                         </div>
                                     </div>
@@ -62,17 +65,17 @@ const Bayar = () => {
                                 </div>
                             </div>
                             <p className="mt-3 text-sm text-gray-700">Nominal yang harus dibayar senilai:</p>
-                            <h3 className="mt-1 text-lg font-bold ">Rp. 99.000</h3>
+                            <h3 className="mt-1 text-lg font-bold ">{(parseInt(data.price)).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</h3>
                         </div>
                         <div className="">
                             <h2 className="mt-3 font-bold ">Instruksi Pembayaran</h2>
-                            <div className="mt-3 ">
-                                <ul className="flex justify-between pb-1 font-bold text-gray-700 border-b-2">
-                                    <li>ATM</li>
-                                    <li>Internet Banking</li>
-                                    <li>M-Banking</li>
+                            <div className="mt-3">
+                                <ul className="flex justify-between gap-0 font-bold text-gray-700 border-b-2 md:gap-36">
+                                    <li onClick={() => setInstructionTabActive({atm: true, iBanking: false, mBanking:false})} className={`pb-1 transition-all cursor-pointer ${instructionTabActive.atm && 'border-b-2'} border-gray-400 hover:border-b-2`}>ATM</li>
+                                    <li onClick={() => setInstructionTabActive({atm: false, iBanking: true, mBanking:false})} className={`pb-1 cursor-pointer transition-all ${instructionTabActive.iBanking && 'border-b-2'} border-gray-400 hover:border-b-2`}>Internet Banking</li>
+                                    <li onClick={() => setInstructionTabActive({atm: false, iBanking: false, mBanking:true})} className={`pb-1 cursor-pointer transition-all ${instructionTabActive.mBanking && 'border-b-2'} border-gray-400 hover:border-b-2`}>M-Banking</li>
                                 </ul>
-                                <ol className="pl-3 mt-3 text-sm leading-6 list-decimal">
+                                {instructionTabActive.atm && <ol className="pl-3 mt-3 text-sm leading-6 list-decimal">
                                     <li>Masukkan kartu ke mesing ATM Mandiri.</li>
                                     <li>Pilih Bahasa.</li>
                                     <li>Masukkan PIN ATM.</li>
@@ -82,7 +85,29 @@ const Bayar = () => {
                                     <li>Masukkan nominal jumlah uang yang akan di transfer.</li>
                                     <li>Layar ATM akan menampilkan data transaksi anda, jika data sudah benar pilih “YA”.</li>
                                     <li>Selesai, struk akan keluar dari mesin ATM.</li>
-                                </ol>
+                                </ol>}
+                                {instructionTabActive.iBanking && <ol className="pl-3 mt-3 text-sm leading-6 list-decimal">
+                                    <li>Masuk ke akun Internet Banking Anda.</li>
+                                    <li>Pilih menu "Transfer" atau "Pembayaran".</li>
+                                    <li>Pilih rekening sumber dana yang ingin Anda gunakan.</li>
+                                    <li>Masukkan nomor rekening penerima dengan benar.</li>
+                                    <li>Masukkan jumlah pembayaran yang ingin Anda transfer.</li>
+                                    <li>Pilih metode transfer: "Transfer langsung" atau "Transfer antar bank".</li>
+                                    <li>Verifikasi rincian pembayaran dan pastikan semuanya benar.</li>
+                                    <li>Konfirmasikan transfer dan masukkan kode keamanan jika diminta.</li>
+                                    <li>Simpan bukti atau konfirmasi pembayaran sebagai referensi.</li>
+                                </ol>}
+                                {instructionTabActive.mBanking && <ol className="pl-3 mt-3 text-sm leading-6 list-decimal">
+                                <li>Masuk ke akun Mobile Banking Anda.</li>
+                                    <li>Pilih menu "Transfer" atau "Pembayaran".</li>
+                                    <li>Pilih rekening sumber dana yang ingin Anda gunakan.</li>
+                                    <li>Masukkan nomor rekening penerima dengan benar.</li>
+                                    <li>Masukkan jumlah pembayaran yang ingin Anda transfer.</li>
+                                    <li>Pilih metode transfer: "Transfer langsung" atau "Transfer antar bank".</li>
+                                    <li>Verifikasi rincian pembayaran dan pastikan semuanya benar.</li>
+                                    <li>Konfirmasikan transfer dan masukkan kode keamanan jika diminta.</li>
+                                    <li>Simpan bukti atau konfirmasi pembayaran sebagai referensi.</li>
+                                </ol>}
                             </div>
                         </div>
                     </div>

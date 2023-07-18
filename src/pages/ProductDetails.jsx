@@ -26,12 +26,12 @@ const ProductDetails = () => {
                         <p className="mt-5 md:text-4xl">{data.desc}</p>
                         <p className="mt-5 font-bold">Mentor</p>
                         <div className="justify-center gap-2 md:justify-normal md:mt-3">
-                            <h3 className="font-bold">William Sutanto</h3>
-                            <p>Programmer</p>
+                            <h3 className="font-bold">{data.mentor1}</h3>
+                            <p>{data.profesi1}</p>
                         </div>
                         <div className="justify-center gap-2 mt-3 md:justify-normal">
-                            <h3 className="font-bold">{data.mentor}</h3>
-                            <p>Programmer</p>
+                            <h3 className="font-bold">{data.mentor2}</h3>
+                            <p>{data.profesi2}</p>
                         </div>
                     </div>
                     <div className="relative w-full mt-5 md:right-0 md:top-44 md:absolute">
@@ -46,8 +46,8 @@ const ProductDetails = () => {
                     <h3 className="px-5 py-3 text-lg">Materi</h3>
                     <h3 className="px-5 py-3 text-lg">Fasilitas</h3>
                     <div className="flex justify-between pt-3 mx-5 border-t-2 price">
-                        <p className="line-through text-md">Rp 125.000</p>
-                        <p className="text-lg text-red-500">Rp 99.000</p>
+                        <p className="line-through text-md">{(parseInt(data.price)+200000).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</p>
+                        <p className="text-lg text-red-500">{(parseInt(data.price)).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</p>
                     </div>
                     <button className="px-3 py-2 m-5 text-lg text-white bg-orange-500 rounded-lg hover:bg-orange-600 " onClick={() => navigate('/checkout')}>Daftar Kelas</button>
                 </div>
